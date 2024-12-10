@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio - Restaurante</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="media/logo.png" alt="Logo del Restaurante">
+      <span>Restaurante El Buen Sabor</span>
+    </div>
+    <nav>
+      <button id="menu-toggle">☰</button>
+      <ul id="menu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#reservar">Reservar</a></li>
+        <li><a href="#menu">Menú</a></li>
+        <li><a href="#opiniones">Opiniones</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <a href="#reservar" class="btn-reservar">Reservar Ahora</a>
+  </header>
+
+  <section id="inicio" class="banner">
+    <h1>Bienvenidos a El Buen Sabor</h1>
+    <p>Disfruta de la mejor gastronomía en un ambiente único.</p>
+    <div class="banner-buttons">
+      <a href="#menu" class="btn">Ver Menú</a>
+      <a href="#reservar" class="btn">Reservar Mesa</a>
+    </div>
+  </section>
+
+  <section id="reservar" class="reservas">
+    <h2>Reservar una Mesa</h2>
+    <form>
+      <input type="text" placeholder="Nombre" required>
+      <input type="number" placeholder="Número de personas" required>
+      <input type="date" required>
+      <input type="time" required>
+      <textarea placeholder="Peticiones especiales"></textarea>
+      <button type="submit">Reservar</button>
+    </form>
+  </section>
+
+  <section id="menu" class="menu">
+    <h2>Nuestro Menú</h2>
+    <div class="menu-items">
+      <div class="menu-item">
+        <img src="media/plato1.jpg" alt="Plato 1">
+        <h3>Rollo Alegría</h3>
+        <p>$60.000</p>
+      </div>
+      <div class="menu-item">
+        <img src="media/plato2.jpg" alt="Plato 2">
+        <h3>Filete de Salmón</h3>
+        <p>$75.000</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="opiniones" class="opiniones">
+    <h2>Opiniones de Nuestros Clientes</h2>
+    <div class="opiniones-list">
+      <p>"¡Excelente comida y ambiente!" - Cliente 1</p>
+      <p>"Definitivamente regresaré, el servicio es espectacular." - Cliente 2</p>
+    </div>
+    <a href="opiniones.html" class="btn">Dejar Opinión</a>
+  </section>
+
+  <footer id="contacto">
+    <h2>Contacto</h2>
+    <p>Dirección: Calle Falsa 123, Ciudad</p>
+    <p>Teléfono: +123 456 7890</p>
+    <p>Email: contacto@restaurante.com</p>
+    <div class="redes-sociales">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">Twitter</a>
+    </div>
+  </footer>
+
+  <script>
+    // JS para menú desplegable en móviles
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+      const menu = document.getElementById('menu');
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    });
+  </script>
+</body>
+</html>
+
